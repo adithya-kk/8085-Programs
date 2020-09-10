@@ -1,0 +1,37 @@
+                             LXI H,C040
+                             
+                             
+                             MOV A,M
+                             INX H
+                             MOV B,M
+                             INX H
+                             MOV C,M
+                             INX H
+                             RRC
+                             RRC
+                             RRC
+                             RRC
+                             SUB M
+                             JNZ XX
+                             
+                             
+                             MOV A,B
+                             RRC
+                             RRC
+                             RRC
+                             RRC
+                             SUB C
+                             JNZ XX
+                             
+                             
+                             JMP X
+                             
+                             
+XX : 
+                             MVI A,FF
+                             
+X : 
+                             STA C090
+                             
+                             
+                             RST 1

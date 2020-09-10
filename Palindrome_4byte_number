@@ -1,0 +1,34 @@
+                             LXI H,C060
+                             
+                             
+                             LXI D,C063
+                             
+                             
+                             MOV A,M
+                             RRC
+                             RRC
+                             RRC
+                             RRC
+                             XCHG
+                             CMP M
+                             JNZ X
+                             
+                             
+                             INX H
+                             DCX D
+                             MOV A,M
+                             XCHG
+                             CMP M
+                             JNZ X
+                             
+                             
+                             MVI B,00
+                             
+                             JMP Y
+                             
+                             
+X : 
+                             MVI B,FF
+                             
+Y : 
+                             RST 1

@@ -1,0 +1,21 @@
+                             LXI H,C050
+                             
+                             
+                             LXI D,C060
+                             
+                             
+                             MVI C,04
+                             
+                             STC
+                             CMC
+XX : 
+                             LDAX D
+                             ADC M
+                             MOV M,A
+                             INX H
+                             INX D
+                             DCR C
+                             JNZ XX
+                             
+                             
+                             RST 1

@@ -1,0 +1,36 @@
+                             LXI SP,C099
+                             
+                             
+                             LXI H,C040
+                             
+                             
+                             MOV A,M
+                             CALL HEX
+                             
+                             
+                             MOV B,A
+                             INX H
+                             MOV A,M
+                             CALL HEX
+                             
+                             
+                             RRC
+                             RRC
+                             RRC
+                             RRC
+                             ADD B
+                             INX H
+                             MOV M,A
+                             RST 1
+HEX : 
+                             SUI 30
+                             
+                             CPI 0A
+                             
+                             JC XX
+                             
+                             
+                             SUI 07
+                             
+XX : 
+                             RET

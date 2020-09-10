@@ -1,0 +1,29 @@
+                             LXI H,C060
+                             
+                             
+                             MOV A,M
+                             MOV B,M
+                             ANI 0F
+                             
+                             INX H
+                             MOV M,A
+                             MOV C,A
+                             MOV A,B
+                             RRC
+                             RRC
+                             RRC
+                             RRC
+                             ANI 0F
+                             
+                             INX H
+                             MOV M,A
+                             SUB A
+XX : 
+                             ADD M
+                             DCR C
+                             JNZ XX
+                             
+                             
+                             INX H
+                             MOV M,A
+                             RST 1

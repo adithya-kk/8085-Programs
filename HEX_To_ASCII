@@ -1,0 +1,38 @@
+                             LXI SP,C099
+                             
+                             
+                             LXI H,C040
+                             
+                             
+                             MOV A,M
+                             MOV B,M
+                             CALL ASCII
+                             
+                             
+                             INX H
+                             MOV M,A
+                             INX H
+                             MOV A,B
+                             RRC
+                             RRC
+                             RRC
+                             RRC
+                             CALL ASCII
+                             
+                             
+                             MOV M,A
+                             RST 1
+ASCII : 
+                             ANI 0F
+                             
+                             CPI 0A
+                             
+                             JC XX
+                             
+                             
+                             ADI 07
+                             
+XX : 
+                             ADI 30
+                             
+                             RET

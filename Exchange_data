@@ -1,0 +1,21 @@
+                             MVI C,05
+                             
+                             LXI H,C030
+                             
+                             
+                             LXI D,C050
+                             
+                             
+X : 
+                             MOV B,M
+                             LDAX D
+                             MOV M,A
+                             MOV A,B
+                             STAX D
+                             INX H
+                             INX D
+                             DCR C
+                             JNZ X
+                             
+                             
+                             RST 1

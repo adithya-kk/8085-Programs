@@ -1,0 +1,21 @@
+                             MVI A,FF
+                             
+                             LXI H,C090
+                             
+                             
+                             MOV C,M
+XX : 
+                             INX H
+                             CMP M
+                             JZ X
+                             
+                             
+                             DCR C
+                             JNZ XX
+                             
+                             
+                             LXI H,0000
+                             
+                             
+X : 
+                             RST 1

@@ -1,0 +1,24 @@
+START : 
+                             MVI B,00
+                             
+                             LXI H,C030
+                             
+                             
+                             MOV A,M
+                             INX H
+XX : 
+                             CMP M
+                             JC X
+                             
+                             
+                             INR B
+                             SUB M
+                             JMP XX
+                             
+                             
+X : 
+                             INX H
+                             MOV M,A
+                             INX H
+                             MOV M,B
+                             RST 1
